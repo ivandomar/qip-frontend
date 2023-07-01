@@ -1,0 +1,14 @@
+.card {
+  position: relative;
+  width: 25vw;
+  padding: 2rem;
+  background: #343434;
+  border: 1px solid #242424;
+  box-shadow: 5px 5px 0 0 #2f2f2f;
+  border-radius: 1px;
+}
+
+.card > p {
+  margin: 0;
+  padding: 0;
+}
