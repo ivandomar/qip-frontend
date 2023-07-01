@@ -47,11 +47,11 @@
   aspect-ratio: 1;
   background: transparent;
   border: 1px solid #242424;
-  color: #242424;
+  color: #646464;
 }
 
 .card-actions > button:hover {
   background: #242424;
   border-color: #444444;
-  color: #444444;
+  color: #afafaf;
 }
