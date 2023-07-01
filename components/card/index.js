@@ -2,6 +2,14 @@ import './index.css';
 
 export default (type, id, title, content, details) => {
   return `<div class="card">
+    <span class="card-icon material-icons-outlined">
+      ${
+        type === 'folder' ? 'folder' : ''
+      }
+      ${
+        type === 'note' ? 'description' : ''
+      }
+    </span>
     <p class="details">${details}</p>
     <p class="title">${title}</p>
     <p class="subtitle">${content}</p>
