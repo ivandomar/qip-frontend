@@ -11,4 +11,37 @@
 .card > p {
   margin: 0;
   padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .details {
+  font-size: .65rem;
+}
+
+.card .title {
+  font-weight: bold;
+}
+
+.card .subtitle {
+  margin-top: 10px;
+  font-size: .9rem;
+  font-style: italic;
+}
+
+.card .card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card .card-actions > button {
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 1px;
+  aspect-ratio: 1;
 }

@@ -1,9 +1,9 @@
 import './index.css';
 
 export default () => `<div class="card">
-  <p>card details</p>
-  <p>Card Title</p>
-  <p>card subtitle</p>
+  <p class="details">card details</p>
+  <p class="title">Card Title</p>
+  <p class="subtitle">card subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitle</p>
   <div class="card-actions">
     <button>view</button>
     <button>edit</button>
