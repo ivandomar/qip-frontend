@@ -5,13 +5,23 @@
   
     color-scheme: light dark;
     color: #afafaf;
-    background-color: #242424;
+    background: linear-gradient(180deg, #242424 0%, #262626 100%);
 }
   
 body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+}
+
+#main-logo {
+    position: fixed;
+    right: -5vw;
+    bottom: -15vh;
+    margin: 0;
+    padding: 0;
+    font-size: 28rem;
+    color: #272727;
 }
   
 #app {
