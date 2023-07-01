@@ -5,8 +5,14 @@ export default () => `<div class="card">
   <p class="title">Card Title</p>
   <p class="subtitle">card subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitle</p>
   <div class="card-actions">
-    <button>view</button>
-    <button>edit</button>
-    <button>delete</button>
+    <button>
+      <span class="material-icons-outlined">visibility</span>
+    </button>
+    <button>
+      <span class="material-icons-outlined">edit</span>
+    </button>
+    <button>
+      <span class="material-icons-outlined">delete</span>
+    </button>
   </div>
 </div>`;
