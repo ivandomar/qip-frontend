@@ -1,14 +1,18 @@
-#landing {
+#main-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  height: 100px;
+  background-color: #444444;
+  box-shadow: 10px 15px 0px 5px black;
 }
 
-#landing h1 {
-  font-size: 7em;
+#main-header img {
+  height: 50%;
 }
 
-#landing img {
-  max-width: 50%;
+#main-header h1 {
+  font-size: 3em;
+  margin-left: 20px;
 }
