@@ -11,7 +11,7 @@ export default () => `<div class="card">
     <button title="edit note">
       <span class="material-icons-outlined">edit</span>
     </button>
-    <button title="delete note">
+    <button title="delete note" class="card-delete-action">
       <span class="material-icons-outlined">delete</span>
     </button>
   </div>

@@ -55,3 +55,8 @@
   border-color: #444444;
   color: #afafaf;
 }
+
+.card-actions .card-delete-action:hover {
+  background: #ec644b;
+  color: #efefef;
+}
