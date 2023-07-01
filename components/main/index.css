@@ -1,0 +1,14 @@
+#landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#landing h1 {
+  font-size: 7em;
+}
+
+#landing img {
+  max-width: 50%;
+}
