@@ -1,5 +1,8 @@
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20vw;
   min-width: 180px;
   max-width: 320px;
@@ -17,7 +20,11 @@
   right: 2rem;
 } 
 
-.card > p {
+.card > .card-content {
+  position: relative;
+}
+
+.card-content > p {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -26,15 +33,15 @@
   text-overflow: ellipsis;
 }
 
-.card .details {
+.card-content > .details {
   font-size: .65rem;
 }
 
-.card .title {
+.card-content > .title {
   font-weight: bold;
 }
 
-.card .subtitle {
+.card-content > .subtitle {
   margin-top: 8px;
   font-size: .9rem;
   font-style: italic;
@@ -45,7 +52,6 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 32px;
 }
 
 .card-actions > button {

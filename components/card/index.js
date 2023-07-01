@@ -10,13 +10,15 @@ export default (type, id, title, content, details) => {
         type === 'note' ? 'description' : ''
       }
     </span>
-    <p class="details">${details}</p>
-    <p class="title">${title}</p>
-    ${
-      type === 'note'
-        ? `<p class="subtitle">${content}</p>`
-        :''
-    }
+    <div class="card-content">
+      <p class="details">${details}</p>
+      <p class="title">${title}</p>
+      ${
+        type === 'note'
+          ? `<p class="subtitle">${content}</p>`
+          :''
+      }
+    </div>
     <div class="card-actions">
       ${
         type === 'folder'
