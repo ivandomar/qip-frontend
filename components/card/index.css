@@ -48,6 +48,7 @@
   background: transparent;
   border: 1px solid #242424;
   color: #646464;
+  transition: background .5s;
 }
 
 .card-actions > button:hover {
