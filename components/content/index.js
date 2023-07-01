@@ -1,3 +1,3 @@
 import './index.css';
 
-export default () => `content`;
+export default () => `<section id="main-content">content</section>`;
