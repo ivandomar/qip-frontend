@@ -1,13 +1,12 @@
 import './index.css';
 import headerComponent from '../header';
+import contentComponent from '../content';
 
 const headerTemplate = headerComponent();
+const contentTemplate = contentComponent();
 
 const template = `
   ${headerTemplate}
-  <section id="landing">
-    <h1>qip your notes anywhere!</h1>
-    <img alt="qip logo" src="/images/qip-logo.svg" />
-  </section>`;
+  ${contentTemplate}`;
 
 export default () => template;
