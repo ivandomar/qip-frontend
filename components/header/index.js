@@ -1,7 +1,6 @@
 import './index.css';
 
-export default (selector) => document.querySelector(selector).innerHTML =
-  `<section id="landing">
-    <h1>qip your notes anywhere!</h1>
+export default (selector) => `<header id="main-header">
     <img alt="qip logo" src="/images/qip-logo.svg" />
-  </section>`;
+    <h1>qip</h1>
+  </header>`;
