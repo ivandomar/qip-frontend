@@ -5,9 +5,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
   top: 128px;
-  padding: 0 5rem 5rem 5rem;
+  padding: 0 5rem 2rem 5rem;
   box-sizing: border-box;
-  background-color: red;
 }
 
 #main-content > * {
