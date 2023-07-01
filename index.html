@@ -9,7 +9,7 @@
     <script type="module">
       import mainComponent from './components/main';
 
-      mainComponent('#app');
+      document.querySelector('#app').innerHTML = mainComponent();
     </script>
   </head>
   <body>
