@@ -12,18 +12,22 @@ export default (type, id, title, content, details) => {
     </span>
     <p class="details">${details}</p>
     <p class="title">${title}</p>
-    <p class="subtitle">${content}</p>
+    ${
+      type === 'note'
+        ? `<p class="subtitle">${content}</p>`
+        :''
+    }
     <div class="card-actions">
       ${
-        type === 'folder' ?
-          `<button title="enter folder" onclick="alert(${id})">
+        type === 'folder'
+          ? `<button title="enter folder" onclick="alert(${id})">
             <span class="material-icons-outlined">subdirectory_arrow_right</span>
           </button>`
           : ''
       }
       ${
-        type === 'note' ?
-          `<button title="view full note content" onclick="alert(${id})">
+        type === 'note'
+          ? `<button title="view full note content" onclick="alert(${id})">
             <span class="material-icons-outlined">visibility</span>
           </button>`
           : ''
