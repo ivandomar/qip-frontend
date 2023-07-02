@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding: 1rem 0;
   box-shadow: 5px 0 0 0 #444444;
+  box-sizing: border-box;
 }
 
 #right-column {
