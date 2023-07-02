@@ -1,14 +1,16 @@
-#landing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+#left-column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background-color: red;
 }
 
-#landing h1 {
-  font-size: 7em;
-}
-
-#landing img {
-  max-width: 50%;
+#right-column {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px);
+  background-color: blue;
 }

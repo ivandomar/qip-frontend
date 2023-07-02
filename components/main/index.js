@@ -6,7 +6,11 @@ const headerTemplate = headerComponent();
 const contentTemplate = contentComponent();
 
 const template = `
-  ${headerTemplate}
-  ${contentTemplate}`;
+  <div id="left-column">
+    ${headerTemplate}
+  </div>
+  <div id="right-column">
+    ${contentTemplate}
+  </div>`;
 
 export default () => template;
