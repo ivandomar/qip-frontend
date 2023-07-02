@@ -6,9 +6,9 @@ const headerTemplate = headerComponent();
 const contentTemplate = contentComponent();
 
 const template = `
-  <div id="left-column">
+  <header>
     ${headerTemplate}
-  </div>
+  </header>
   <div id="right-column">
     ${contentTemplate}
   </div>`;

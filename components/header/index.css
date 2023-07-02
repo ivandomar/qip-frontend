@@ -1,13 +1,4 @@
-#main-header {
-  position: fixed;
-  width: 100%;
-  padding: 2vh 0;
-  background: #242424;
-  text-align: center;
-  box-shadow: 0 0 0 3px #2F2F2F;
-  z-index: 1992;
-}
-
-#main-header img {
-  height: 8vh;
+img {
+  position: relative;
+  width: 50%;
 }
