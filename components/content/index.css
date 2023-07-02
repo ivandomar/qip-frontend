@@ -4,8 +4,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  top: 128px;
-  padding: 0 5rem 2rem 5rem;
   box-sizing: border-box;
 }
 

@@ -16,4 +16,6 @@ header {
   top: 0;
   left: 80px;
   width: calc(100% - 80px);
+  padding: 2rem;
+  box-sizing: border-box;
 }
