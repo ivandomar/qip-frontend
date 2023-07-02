@@ -9,3 +9,8 @@ h1#logo {
   margin-top: 16px;
   width: 48px;
 }
+
+#add-button:hover {
+  background: #26c281;
+  color: #efefef;
+}
