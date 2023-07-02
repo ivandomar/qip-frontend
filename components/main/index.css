@@ -20,3 +20,19 @@ header {
   padding: 2rem;
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+  border-radius: 1px;
+  aspect-ratio: 1;
+  background: transparent;
+  border: 1px solid #646464;
+  color: #646464;
+  transition: background .5s;
+}
+
+button:hover {
+  background: #242424;
+  border-color: #444444;
+  color: #afafaf;
+}

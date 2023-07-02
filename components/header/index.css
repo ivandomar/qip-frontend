@@ -4,3 +4,8 @@ h1#logo {
   color: #444444;
   font-size: 2rem;
 }
+
+#add-button {
+  margin-top: 16px;
+  width: 48px;
+}
