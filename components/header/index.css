@@ -1,4 +1,6 @@
-img {
+h1#logo {
   position: relative;
-  width: 50%;
+  margin: 0;
+  color: #444444;
+  font-size: 2rem;
 }

@@ -1,3 +1,3 @@
 import './index.css';
 
-export default () => `<img alt="qip logo" src="/images/qip-logo.svg" />`;
+export default () => `<h1 id="logo">qip</h1>`;
