@@ -1,7 +1,11 @@
 import './index.css';
 
+
 export default (type, id, title, content, details) => {
-  return `<div class="card">
+  const card = document.createElement('div');
+  card.classList = 'card';
+
+  card.innerHTML = `
     <span class="card-icon material-icons-outlined">
       ${
         type === 'folder' ? 'folder' : ''
@@ -41,5 +45,7 @@ export default (type, id, title, content, details) => {
         <span class="material-icons-outlined">delete</span>
       </button>
     </div>
-  </div>`;
+`;
+
+    return card;
 };

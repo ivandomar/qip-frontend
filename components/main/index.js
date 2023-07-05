@@ -2,15 +2,22 @@ import './index.css';
 import headerComponent from '../header';
 import contentComponent from '../content';
 
-const headerTemplate = headerComponent();
-const contentTemplate = contentComponent();
+export default () => {
+  const headerTemplate = headerComponent();
+  const contentTemplate = contentComponent();
 
-const template = `
-  <header>
-    ${headerTemplate}
-  </header>
-  <div id="right-column">
-    ${contentTemplate}
-  </div>`;
+  const main = document.createElement('div');
+  const leftContainer = document.createElement('div');
+  leftContainer.id = 'left-column';
 
-export default () => template;
+  leftContainer.append(headerTemplate);
+
+  const rightContainer = document.createElement('div');
+  rightContainer.id = 'right-column';
+  rightContainer.append(contentTemplate);
+
+  main.append(leftContainer);
+  main.append(rightContainer);
+
+  return main;
+};

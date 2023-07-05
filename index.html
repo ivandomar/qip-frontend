@@ -16,7 +16,9 @@
     <script type="module">
       import mainComponent from './components/main';
 
-      document.querySelector('#app').innerHTML = mainComponent();
+      const mainTemplate = mainComponent();
+
+      document.querySelector('#app').append(mainTemplate);
     </script>
   </body>
 </html>
