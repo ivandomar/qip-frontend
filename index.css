@@ -3,7 +3,7 @@
     line-height: 1.5;
     font-weight: 300;
   
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
     color: #afafaf;
     background: linear-gradient(180deg, #242424 0%, #262626 100%);
 }
@@ -29,10 +29,10 @@ body {
     min-height: 100vh;
 }
   
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
         background-color: #ffffff;
     }
-}
+} */
   
