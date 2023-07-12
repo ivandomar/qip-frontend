@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@sweetalert2/theme-wordpress-admin": "^5.0.15",
+    "axios": "^1.4.0",
     "material-icons": "^1.13.8",
     "sweetalert2": "^11.7.12"
   }
