@@ -16,7 +16,7 @@
     <script type="module">
       import mainComponent from './components/main';
 
-      const mainTemplate = mainComponent();
+      const mainTemplate = await mainComponent();
 
       document.querySelector('#app').append(mainTemplate);
     </script>

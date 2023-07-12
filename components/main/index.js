@@ -2,9 +2,9 @@ import './index.css';
 import headerComponent from '../header';
 import contentComponent from '../content';
 
-export default () => {
+export default async () => {
   const headerTemplate = headerComponent();
-  const contentTemplate = contentComponent();
+  const contentTemplate = await contentComponent();
 
   const main = document.createElement('div');
   const leftContainer = document.createElement('div');
