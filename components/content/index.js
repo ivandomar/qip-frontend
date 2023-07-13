@@ -4,8 +4,8 @@ import CardComponent from '../card';
 import elementService from '../../services/elementService.';
 
 export default async () => {
-    const content = document.createElement('section');
-    content.id = 'main-content';
+    const contentSection = document.createElement('section');
+    contentSection.id = 'main-content';
 
     try {
         const { data: { elements } } = await elementService.getByParent(null);
@@ -22,22 +22,22 @@ export default async () => {
                     created_at
                 );
     
-                content.append(cardTemplate);
+                contentSection.append(cardTemplate);
             });
         } else {
             const placeholder = document.createElement('p');
             placeholder.id = 'placeholder';
             placeholder.innerText = 'This folder is empty =\'(';
 
-            content.append(placeholder);
+            contentSection.append(placeholder);
         }
     } catch (error) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
+            text: error.message,
         });
     }
 
-    return content;
+    return contentSection;
 };
