@@ -7,6 +7,23 @@ class ElementService extends BaseService {
         super('elements');
     }
 
+    async create(parentId, elementTypeId, title, content) {
+        const newElement = {
+            parent_id: parentId,
+            element_type_id: elementTypeId,
+            title,
+            content
+        }
+
+        try {
+            const createdElement = await this.client.post(`/`);
+
+            return createdElement;
+        } catch (error) {
+            throw this.buildServiceError(error);
+        }
+    }
+
     async getByParent(parentId) {
         try {
             const result = await this.client.get(`/${parentId}/elements`);
