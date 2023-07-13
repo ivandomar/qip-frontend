@@ -16,7 +16,7 @@ class ElementService extends BaseService {
         }
 
         try {
-            const createdElement = await this.client.post(`/`);
+            const createdElement = await this.client.post(`/`, newElement);
 
             return createdElement;
         } catch (error) {
