@@ -1,5 +1,6 @@
-import './index.css';
 import Swal from 'sweetalert2'
+import elementService from '../../services/elementService.';
+import './index.css';
 
 export default () => {
     const header = document.createElement('div');
@@ -14,7 +15,13 @@ export default () => {
 
         const formData = new FormData(event.target);
 
-        alert(formData.get('type'));
+        elementService.create(
+            null,
+            Number(formData.get('type')),
+            formData.get('title'),
+            formData.get('content') ? formData.get('content') : null,
+        ).then(({ response }) => alert(JSON.stringify(response.data)))
+        .catch((error) => alert(error.message));
     }
     addForm.onchange = ({ target }) => {
         if (target.name === 'type') {
