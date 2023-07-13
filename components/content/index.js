@@ -11,7 +11,16 @@ export default async () => {
         const { data: { elements } } = await elementService.getByParent(null);
 
         if (elements.length) {
-            elements.map((element) => {
+            elements.sort((a, b) => {
+                if (a.element_type_id != b.element_type_id) {
+                    return a.element_type_id == 1 ? -1 : 1;
+                }
+
+                const titleA = String(a.title);
+                const titleB = String(b.title);
+
+                return titleA.localeCompare(titleB);
+            }).map((element) => {
                 const { id, element_type_id, title, content, created_at } = element;
     
                 const cardTemplate = CardComponent(
