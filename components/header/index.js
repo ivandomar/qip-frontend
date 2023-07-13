@@ -9,9 +9,31 @@ export default () => {
 
     const addForm = document.createElement('form');
     addForm.id = 'add-form';
+    addForm.onsubmit = (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        alert(formData.get('type'));
+    }
+    addForm.onchange = ({ target }) => {
+        if (target.name === 'type') {
+            const contentInput = addForm.querySelector("input[name='content']");
+
+            if (target.value === '1') {
+                console.log(contentInput, '1');
+                contentInput.removeAttribute('required', false);
+                contentInput.setAttribute('disabled', true);
+            } else if (target.value === '2') {
+                console.log(contentInput, '2');
+                contentInput.setAttribute('required', true);
+                contentInput.removeAttribute('disabled');             
+            }
+        }
+    };
     addForm.innerHTML = `
         <label>
-            <input type="radio" name="type" value="1" />
+            <input type="radio" name="type" value="1"  required />
             Folder
         </label>
         <label>
@@ -19,7 +41,7 @@ export default () => {
             Note
         </label>
         <br />
-        <input type="text" name="title" placeholder="Title" />
+        <input type="text" name="title" placeholder="Title" required />
         <br />
         <input type="text" name="content" placeholder="Content" />
         <br />
