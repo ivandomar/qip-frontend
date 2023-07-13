@@ -8,12 +8,22 @@ export default () => {
     // const addFormRef = 
 
     const addForm = document.createElement('form');
+    addForm.id = 'add-form';
     addForm.innerHTML = `
-        <input type="radio" name="type" value="1">Folder</input>
-        <input type="radio" name="type" value="2">Note</input>
+        <label>
+            <input type="radio" name="type" value="1" />
+            Folder
+        </label>
+        <label>
+            <input type="radio" name="type" value="2" />
+            Note
+        </label>
+        <br />
         <input type="text" name="title" placeholder="Title" />
-        <input type="text" name="title" placeholder="Title" />
+        <br />
         <input type="text" name="content" placeholder="Content" />
+        <br />
+        <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
     `;
 
     const addButton = document.createElement('button');
@@ -21,7 +31,8 @@ export default () => {
     addButton.innerHTML = '<span class="material-icons-outlined">add</span>';
     addButton.onclick = () => Swal.fire({
         title: 'Create new element',
-        html: addForm
+        html: addForm,
+        showConfirmButton: false,
       });
 
     header.append(addButton);
