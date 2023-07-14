@@ -24,6 +24,21 @@ class ElementService extends BaseService {
         }
     }
 
+    async edit(id, title, content) {
+        const newData = {
+            title,
+            content: content ? content : null,
+        };
+
+        try {
+            const editedElement = await this.client.patch(`/${id}`, newData);
+
+            return editedElement;
+        } catch (error) {
+            throw this.buildServiceError(error);
+        }
+    }
+
     async get(id) {
         try {
             const result = await this.client.get(`/${id}`);
