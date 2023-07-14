@@ -35,9 +35,20 @@ export default (id, type, title, content) => {
     form.innerHTML = `
         <input type="text" name="title" placeholder="Title" value="${title}" required />
         <br />
-        <input type="text" name="content" placeholder="Content" value="${type == 2 ? content : null}" ${type == 2 ? 'required' : ''} />
         <br />
-        <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
+        <input
+            type="text"
+            name="content"
+            placeholder="Content"
+            value="${type === 2 ? content : ''}"
+            ${type === 2 ? 'required' : ''}
+            ${type === 1 ? 'disabled' : ''}
+        />
+        <br />
+        <div id="edit-form-actions">
+            <button type="button" id="cancel-button"><span class="material-icons-outlined">close</span></button>
+            <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
+        </div>
     `;
 
     return form;
