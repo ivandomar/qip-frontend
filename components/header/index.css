@@ -21,21 +21,3 @@ h1#logo {
   justify-content: space-between;
   align-items: flex-start;
 }
-
-#add-form > * {
-  color: #afafaf;
-}
-
-#add-form > input {
-  width: 100%;
-  height: 48px;
-  padding: 1rem;
-  border: 1px solid #646464;
-  background: transparent;
-  box-sizing: border-box;
-}
-
-#add-form > input:focus {
-  border: 1px solid #646464;
-  outline: none;
-}

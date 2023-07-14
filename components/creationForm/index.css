@@ -1,10 +1,28 @@
-#send-button {
+#add-form > * {
+  color: #afafaf;
+}
+
+#add-form > input {
+  width: 100%;
+  height: 48px;
+  padding: 1rem;
+  border: 1px solid #646464;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+#add-form > input:focus {
+  border: 1px solid #646464;
+  outline: none;
+}
+
+#add-form #send-button {
     align-self: flex-end;
     margin-top: 16px;
     width: 64px;
-  }
+}
   
-  #send-button:hover {
+#add-form #send-button:hover {
     background: #038aff;
     color: #efefef;
-  }
+}
