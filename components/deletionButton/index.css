@@ -1,0 +1,17 @@
+.card-actions .card-delete-action:hover {
+    background: #ec644b;
+    color: #efefef;
+  }
+
+.deletion-button {
+    width: 48px;
+}
+
+.deletion-confirm-button {
+    margin-left: 2rem;
+}
+
+.deletion-confirm-button:hover {
+    background-color: #26c281;
+    color: #efefef;
+}
