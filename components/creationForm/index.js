@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 import elementService from '../../services/elementService.';
+import './index.css';
 
 const handleCreationSubmit = (event) => {
     event.preventDefault();
