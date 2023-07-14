@@ -1,5 +1,29 @@
 import Swal from 'sweetalert2';
+import elementService from '../../services/elementService.';
 import './index.css';
+
+const handleConfirmClick = (elementId) => {
+try {
+    elementService.delete(elementId);
+
+    Swal.fire({
+        icon: 'success',
+        toast: true,
+        timer: 3000,
+        position: 'top',
+        title: `${title} deleted`,
+        showConfirmButton: false,
+        background: '#242424',
+        didClose: () => location.reload(),
+    });
+} catch (error) {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error.message,
+    });
+}
+};
 
 const handleClick = (elementId, elementTitle) => {
     Swal.fire({
@@ -11,6 +35,7 @@ const handleClick = (elementId, elementTitle) => {
         confirmButtonText: 'YES',
         denyButtonText: 'NO',
         customClass: { denyButton: 'deletion-button deletion-deny-button', confirmButton: 'deletion-button deletion-confirm-button' },
+        preConfirm: handleConfirmClick,
     });
 };
 
