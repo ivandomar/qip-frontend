@@ -2,23 +2,22 @@ import Swal from 'sweetalert2'
 import elementService from '../../services/elementService.';
 import './index.css';
 
-const handleEditionSubmit = (event) => {
+const handleEditionSubmit = (event, id, title) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
 
-    elementService.create(
-        null,
-        Number(formData.get('type')),
+    elementService.edit(
+        id,
         formData.get('title'),
         formData.get('content') ? formData.get('content') : null,
-    ).then(({ data: { title } }) => {
+    ).then(() => {
         Swal.fire({
             icon: 'success',
             toast: true,
             timer: 3000,
             position: 'top',
-            title: `${title} succesfully created`,
+            title: `${title} succesfully edited`,
             showConfirmButton: false,
             background: '#242424',
             didClose: () => location.reload(),
@@ -30,7 +29,7 @@ const handleEditionSubmit = (event) => {
 export default (id, type, title, content) => {
     const form = document.createElement('form');
     form.id = 'edit-form';
-    form.onsubmit = handleEditionSubmit;
+    form.onsubmit = (event) => handleEditionSubmit(event, id, title);
 
     form.innerHTML = `
         <input type="text" name="title" placeholder="Title" value="${title}" required />
