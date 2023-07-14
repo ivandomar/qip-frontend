@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 import elementService from '../../services/elementService.';
+import ElementTypeConstants from '../../constants/ElementType';
 import './index.css';
 
 const handleEditionSubmit = (event, id, title) => {
@@ -38,9 +39,9 @@ export default (id, type, title, content) => {
             type="text"
             name="content"
             placeholder="Content"
-            value="${type === 2 ? content : ''}"
-            ${type === 2 ? 'required' : ''}
-            ${type === 1 ? 'disabled' : ''}
+            value="${type === ElementTypeConstants.NOTE ? content : ''}"
+            ${type === ElementTypeConstants.NOTE ? 'required' : ''}
+            ${type === ElementTypeConstants.FOLDER ? 'disabled' : ''}
         />
         <br />
         <div id="edit-form-actions">

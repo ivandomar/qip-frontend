@@ -1,12 +1,13 @@
 import Swal from 'sweetalert2';
 import elementService from '../../services/elementService.';
+import ElementTypeConstants from '../../constants/ElementType';
 import './index.css';
 
 const handleClick = (elementId) => {
     elementService.get(elementId)
         .then(({ data: { element_type_id, title, content } }) => {
             Swal.fire({
-                iconHtml: element_type_id == 1
+                iconHtml: element_type_id == ElementTypeConstants.FOLDER
                     ? '<span class="material-icons-outlined">folder</span>'
                     : '<span class="material-icons-outlined">description</span>',
                 title: title,
