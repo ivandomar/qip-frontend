@@ -16,9 +16,10 @@
     <script type="module">
       import main from './components/main';
 
-      const mainComponent = await main();
-
-      document.querySelector('#app').append(mainComponent);
+      main()
+        .then((mainComponent) => {
+          document.querySelector('#app').append(mainComponent);
+        }).catch((error) => alert('Could not load the application, sorry.'));
     </script>
   </body>
 </html>
