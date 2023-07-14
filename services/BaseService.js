@@ -5,9 +5,6 @@ class BaseService {
     constructor(baseSegment) {
         this.client = axios.create({
             baseURL: `${config.apiUrl}/${baseSegment}`,
-            headers: {
-                'content-type': 'application/json',
-            },
         });
     }
 
