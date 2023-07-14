@@ -21,14 +21,14 @@ export default async () => {
 
                 return titleA.localeCompare(titleB);
             }).map((element) => {
-                const { id, element_type_id, title, content, created_at } = element;
+                const { id, element_type_id, title, content, updated_at } = element;
     
                 const cardTemplate = CardComponent(
                     element_type_id,
                     id,
                     title,
                     element_type_id === 1 ? null : content,
-                    created_at
+                    updated_at
                 );
     
                 contentSection.append(cardTemplate);
