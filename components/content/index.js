@@ -24,7 +24,7 @@ export default async () => {
                 const { id, element_type_id, title, content, created_at } = element;
     
                 const cardTemplate = CardComponent(
-                    element_type_id === 1 ? 'folder' : 'note',
+                    element_type_id,
                     id,
                     title,
                     element_type_id === 1 ? null : content,
