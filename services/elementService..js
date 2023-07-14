@@ -8,16 +8,12 @@ class ElementService extends BaseService {
     }
 
     async create(parentId, elementTypeId, title, content) {
-        const newElement = new FormData();
-
-        if (parentId) {
-            newElement.append('parent_id', parentId);
-        }
-        if (content) {
-            newElement.append('content', content);
-        }
-        newElement.append('element_type_id', elementTypeId);
-        newElement.append('title', title);
+        const newElement = {
+            parent_id: parentId ? parentId : null,
+            element_type_id: elementTypeId,
+            title,
+            content: content ? content : null,
+        };
 
         try {
             const createdElement = await this.client.post('/', newElement);
