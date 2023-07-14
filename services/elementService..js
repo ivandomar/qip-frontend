@@ -24,6 +24,16 @@ class ElementService extends BaseService {
         }
     }
 
+    async get(id) {
+        try {
+            const result = await this.client.get(`/${id}`);
+
+            return result;
+        } catch (error) {
+            throw this.buildServiceError(error);
+        }
+    }
+
     async getByParent(parentId) {
         try {
             const result = await this.client.get(`/${parentId}/elements`);
