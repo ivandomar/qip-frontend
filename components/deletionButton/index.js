@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import elementService from '../../services/elementService.';
 import './index.css';
 
-const handleConfirmClick = (elementId) => {
+const handleConfirmClick = (elementId, elementTitle) => {
 try {
     elementService.delete(elementId);
 
@@ -11,7 +11,7 @@ try {
         toast: true,
         timer: 3000,
         position: 'top',
-        title: `${title} deleted`,
+        title: `${elementTitle} deleted`,
         showConfirmButton: false,
         background: '#242424',
         didClose: () => location.reload(),
@@ -35,7 +35,7 @@ const handleClick = (elementId, elementTitle) => {
         confirmButtonText: 'YES',
         denyButtonText: 'NO',
         customClass: { denyButton: 'deletion-button deletion-deny-button', confirmButton: 'deletion-button deletion-confirm-button' },
-        preConfirm: handleConfirmClick,
+        preConfirm: () => handleConfirmClick(elementId, elementTitle),
     });
 };
 
