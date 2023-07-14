@@ -62,7 +62,10 @@ export default () => {
         <br />
         <input type="text" name="content" placeholder="Content" />
         <br />
-        <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
+        <div id="add-form-actions">
+            <button type="button" id="cancel-button"><span class="material-icons-outlined">close</span></button>
+            <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
+        </div>
     `;
 
     return form;

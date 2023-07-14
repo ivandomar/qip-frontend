@@ -1,3 +1,10 @@
+#add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 #add-form > * {
   color: #afafaf;
 }
@@ -16,13 +23,20 @@
   outline: none;
 }
 
-#add-form #send-button {
-    align-self: flex-end;
+#add-form-actions {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#add-form-actions button {
     margin-top: 16px;
+    margin-left: 16px;
     width: 64px;
 }
   
-#add-form #send-button:hover {
+#add-form-actions #send-button:hover {
     background: #038aff;
     color: #efefef;
 }

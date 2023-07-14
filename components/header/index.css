@@ -14,10 +14,3 @@ h1#logo {
   background: #26c281;
   color: #efefef;
 }
-
-#add-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
