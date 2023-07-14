@@ -14,11 +14,11 @@
     <h1 id="main-logo">qip</h1>
     <main id="app"></main>
     <script type="module">
-      import mainComponent from './components/main';
+      import main from './components/main';
 
-      const mainTemplate = await mainComponent();
+      const mainComponent = await main();
 
-      document.querySelector('#app').append(mainTemplate);
+      document.querySelector('#app').append(mainComponent);
     </script>
   </body>
 </html>

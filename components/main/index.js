@@ -1,20 +1,20 @@
 import './index.css';
-import headerComponent from '../header';
-import contentComponent from '../content';
+import header from '../header';
+import content from '../content';
 
 export default async () => {
-  const headerTemplate = headerComponent();
-  const contentTemplate = await contentComponent();
+  const headerComponent = header();
+  const contentComponent = await content();
 
   const main = document.createElement('div');
   const leftContainer = document.createElement('div');
   leftContainer.id = 'left-column';
 
-  leftContainer.append(headerTemplate);
+  leftContainer.append(headerComponent);
 
   const rightContainer = document.createElement('div');
   rightContainer.id = 'right-column';
-  rightContainer.append(contentTemplate);
+  rightContainer.append(contentComponent);
 
   main.append(leftContainer);
   main.append(rightContainer);

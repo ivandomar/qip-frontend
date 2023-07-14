@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import './index.css';
-import CardComponent from '../card';
+import card from '../card';
 import elementService from '../../services/elementService.';
 
 export default async () => {
@@ -23,7 +23,7 @@ export default async () => {
             }).map((element) => {
                 const { id, element_type_id, title, content, updated_at } = element;
     
-                const cardTemplate = CardComponent(
+                const cardComponent = card(
                     element_type_id,
                     id,
                     title,
@@ -31,7 +31,7 @@ export default async () => {
                     updated_at
                 );
     
-                contentSection.append(cardTemplate);
+                contentSection.append(cardComponent);
             });
         } else {
             const placeholder = document.createElement('p');
