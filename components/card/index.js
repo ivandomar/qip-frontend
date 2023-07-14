@@ -37,9 +37,6 @@ export default (type, id, title, content, details) => {
                 ? `<button title="view note"></button>`
                 : ''
         }
-        <button title="edit note" onclick="alert(${id})">
-            <span class="material-icons-outlined">edit</span>
-        </button>
     </div>`;
 
     if (type === 'note') {
