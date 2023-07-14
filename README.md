@@ -28,4 +28,4 @@ $ npm run dev
 $ npm run build && npm run preview
 ```
 
-> **A aplicação fica acessível pelo navegador acessando http://localhost:5000**
+> **A aplicação fica acessível pelo navegador acessando http://localhost:5173 (em desenvolvimento) ou http://127.0.0.1:4173 (em preview)**
