@@ -39,14 +39,3 @@ h1#logo {
   border: 1px solid #646464;
   outline: none;
 }
-
-#send-button {
-  align-self: flex-end;
-  margin-top: 16px;
-  width: 64px;
-}
-
-#send-button:hover {
-  background: #038aff;
-  color: #efefef;
-}
