@@ -1,4 +1,5 @@
 import deletionButton from '../deletionButton';
+import viewButton from '../viewButton';
 import './index.css';
 
 
@@ -33,15 +34,18 @@ export default (type, id, title, content, details) => {
         }
         ${
             type === 'note'
-                ? `<button title="view full note content" onclick="alert(${id})">
-                <span class="material-icons-outlined">visibility</span>
-                </button>`
+                ? `<button title="view note"></button>`
                 : ''
         }
         <button title="edit note" onclick="alert(${id})">
             <span class="material-icons-outlined">edit</span>
         </button>
     </div>`;
+
+    if (type === 'note') {
+        const viewButtonComponent = viewButton(id);
+        card.querySelector("div.card-actions button[title='view note']").replaceWith(viewButtonComponent);
+    }
 
     const deletionButtonComponent = deletionButton(id, title);
 

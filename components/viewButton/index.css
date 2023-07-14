@@ -1,3 +1,11 @@
+.view-dialog {
+    color: #afafaf;
+}
+
+.view-dialog-icon span {
+    font-size: 5rem !important;
+}
+
 .view-confirm-button {
     width: 48px;
 }
