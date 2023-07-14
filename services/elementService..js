@@ -37,6 +37,16 @@ class ElementService extends BaseService {
             throw this.buildServiceError(error);
         }
     }
+
+    async delete(id) {
+        try {
+            await this.client.delete(`/${id}`);
+
+            return true;
+        } catch (error) {
+            throw this.buildServiceError(error);
+        }
+    }
 };
 
 export default new ElementService(config.apiUrl);
