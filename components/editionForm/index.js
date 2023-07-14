@@ -35,7 +35,6 @@ export default (id, type, title, content) => {
     form.innerHTML = `
         <input type="text" name="title" placeholder="Title" value="${title}" required />
         <br />
-        <br />
         <input
             type="text"
             name="content"

@@ -1,3 +1,10 @@
+#edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 #edit-form > * {
   color: #afafaf;
 }
@@ -17,13 +24,13 @@
 }
 
 #edit-form-actions {
+  align-self: stretch;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 #edit-form-actions button {
-    align-self: flex-end;
     margin-top: 16px;
     margin-left: 16px;
     width: 64px;
