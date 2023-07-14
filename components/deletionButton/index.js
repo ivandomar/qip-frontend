@@ -3,26 +3,26 @@ import elementService from '../../services/elementService.';
 import './index.css';
 
 const handleConfirmClick = (elementId, elementTitle) => {
-try {
-    elementService.delete(elementId);
-
-    Swal.fire({
-        icon: 'success',
-        toast: true,
-        timer: 3000,
-        position: 'top',
-        title: `${elementTitle} deleted`,
-        showConfirmButton: false,
-        background: '#242424',
-        didClose: () => location.reload(),
-    });
-} catch (error) {
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: error.message,
-    });
-}
+    elementService.delete(elementId)
+        .then(() => {
+            Swal.fire({
+                icon: 'success',
+                toast: true,
+                timer: 3000,
+                position: 'top',
+                title: `${elementTitle} deleted`,
+                showConfirmButton: false,
+                background: '#242424',
+                didClose: () => location.reload(),
+            });
+        })
+        .catch((error) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error.message,
+            });
+        });
 };
 
 const handleClick = (elementId, elementTitle) => {
