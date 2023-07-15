@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import elementService from '../../services/elementService.';
+import elementService from '../../services/elementService';
 import './index.css';
 
 const handleConfirmClick = (elementId, elementTitle) => {

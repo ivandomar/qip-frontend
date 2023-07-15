@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import elementService from '../../services/elementService.';
+import elementService from '../../services/elementService';
 import ElementTypeConstants from '../../constants/ElementType';
 import './index.css';
 

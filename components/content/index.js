@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import './index.css';
 import breadcrumbs from '../breadcrumbs';
 import card from '../card';
-import elementService from '../../services/elementService.';
+import elementService from '../../services/elementService';
 import ElementTypeConstants from '../../constants/ElementType';
 
 export default async () => {
