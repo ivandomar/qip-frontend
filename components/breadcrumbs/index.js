@@ -1,14 +1,22 @@
 import locationService from '../../services/locationService';
 import './index.css';
 
+const handleBackButtonClick = () => {
+    locationService.goBack();
+
+    location.reload();
+};
+
 export default () => {
     const breadcrumbContainer = document.createElement('div');
     breadcrumbContainer.id = 'breadcrumb-container';
 
-    if (locationService.getLastIndex()) {
+    if (locationService.getLastIndex() != null) {
         const backButton = document.createElement('button');
         backButton.id = 'back-button';
         backButton.innerHTML = '<span class="material-icons-outlined">arrow_back_ios</span>';
+        backButton.onclick = handleBackButtonClick;
+
         breadcrumbContainer.append(backButton);
     }
 
