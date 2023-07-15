@@ -3,6 +3,7 @@ import './index.css';
 import breadcrumbs from '../breadcrumbs';
 import card from '../card';
 import elementService from '../../services/elementService';
+import locationService from '../../services/locationService';
 import ElementTypeConstants from '../../constants/ElementType';
 
 export default async () => {
@@ -13,7 +14,11 @@ export default async () => {
     contentSection.append(breadcrumbsComponent);
 
     try {
-        const { data: { elements } } = await elementService.getByParent(null);
+        const currentLocation = locationService.getCurrentLocation();
+
+        const currentLocationId = currentLocation ? currentLocation.id : null;
+
+        const { data: { elements } } = await elementService.getByParent(currentLocationId);
 
         if (elements.length) {
             elements.sort((a, b) => {
