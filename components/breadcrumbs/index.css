@@ -1,0 +1,26 @@
+#breadcrumb-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #444444;
+    color: #afafaf;
+}
+
+#back-button {
+    width: 48px;
+}
+
+#root-breadcrumb {
+    font-style: italic;
+}
+
+#current-breadcrumb {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#breadcrumb-container > p {
+    margin-left: 1rem;
+}
