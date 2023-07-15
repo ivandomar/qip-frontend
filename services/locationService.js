@@ -46,6 +46,10 @@ class LocationService {
         return stack.length ? stack.length - 1 : null;
     }
 
+    getStack() {
+        return this.fetch();
+    }
+
     goBack() {
         const stack = this.fetch();
         stack.pop();
