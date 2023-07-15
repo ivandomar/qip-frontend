@@ -1,5 +1,6 @@
 import deletionButton from '../deletionButton';
 import editButton from '../editButton';
+import navigateButton from '../navigateButton';
 import viewButton from '../viewButton';
 import ElementTypeConstants from '../../constants/ElementType';
 import './index.css';
@@ -27,23 +28,15 @@ export default (type, id, title, content, details) => {
             }
         </div>
         <div class="card-actions">
-        ${
-            type === ElementTypeConstants.FOLDER
-            ? `<button title="enter folder" onclick="alert(${id})">
-                <span class="material-icons-outlined">subdirectory_arrow_right</span>
-            </button>`
-            : ''
-        }
-        ${
-            type === ElementTypeConstants.NOTE
-                ? `<button title="view note"></button>`
-                : ''
-        }
-    </div>`;
+            <template class="card-action-placeholder"></template>
+        </div>`;
 
     if (type === ElementTypeConstants.NOTE) {
         const viewButtonComponent = viewButton(id);
-        card.querySelector("div.card-actions button[title='view note']").replaceWith(viewButtonComponent);
+        card.querySelector("template.card-action-placeholder").replaceWith(viewButtonComponent);
+    } else if (type === ElementTypeConstants.FOLDER) {
+        const navigateButtonComponent = navigateButton(id, title);
+        card.querySelector("template.card-action-placeholder").replaceWith(navigateButtonComponent);
     }
 
     const editButtonComponent = editButton(id, type, title, content);
