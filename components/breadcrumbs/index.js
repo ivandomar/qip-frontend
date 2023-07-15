@@ -5,16 +5,18 @@ export default () => {
     const breadcrumbContainer = document.createElement('div');
     breadcrumbContainer.id = 'breadcrumb-container';
 
-    const backButton = document.createElement('button');
-    backButton.id = 'back-button';
-    backButton.innerHTML = '<span class="material-icons-outlined">arrow_back_ios</span>';
+    if (locationService.getLastIndex()) {
+        const backButton = document.createElement('button');
+        backButton.id = 'back-button';
+        backButton.innerHTML = '<span class="material-icons-outlined">arrow_back_ios</span>';
+        breadcrumbContainer.append(backButton);
+    }
 
     const rootBreadcrumb = document.createElement('p');
     rootBreadcrumb.id = 'root-breadcrumb';
     rootBreadcrumb.classList = 'breadcrumb-item';
     rootBreadcrumb.innerHTML = 'root';
     
-    breadcrumbContainer.append(backButton);
     breadcrumbContainer.append(rootBreadcrumb);
     
     const navigationStack = locationService.getStack();
