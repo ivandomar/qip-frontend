@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 import elementService from '../../services/elementService';
+import locationService from '../../services/locationService';
 import './index.css';
 
 const handleCreationSubmit = (event) => {
@@ -7,8 +8,10 @@ const handleCreationSubmit = (event) => {
 
     const formData = new FormData(event.target);
 
+    const currentLocation = locationService.getCurrentLocation();
+
     elementService.create(
-        null,
+        currentLocation ? currentLocation.id : null,
         Number(formData.get('type')),
         formData.get('title'),
         formData.get('content') ? formData.get('content') : null,
