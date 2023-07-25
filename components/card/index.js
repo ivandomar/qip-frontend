@@ -10,33 +10,25 @@ export default (type, id, title, content, details) => {
     const card = document.createElement('div');
     card.classList = 'card';
     card.innerHTML = `
-        <span class="card-icon material-icons-outlined">
-        ${
-            type === ElementTypeConstants.FOLDER ? 'folder' : ''
-        }
-        ${
-            type === ElementTypeConstants.NOTE ? 'description' : ''
-        }
-        </span>
+        <span class="card-icon material-icons-outlined"></span>
         <div class="card-content">
             <p class="details">${details}</p>
             <p class="title">${title}</p>
-            ${
-                type === ElementTypeConstants.NOTE
-                    ? `<p class="subtitle">${content}</p>`
-                    :''
-            }
         </div>
-        <div class="card-actions">
-            <template class="card-action-placeholder"></template>
-        </div>`;
+        <div class="card-actions"></div>`;
 
-    if (type === ElementTypeConstants.NOTE) {
-        const viewButtonComponent = viewButton(id);
-        card.querySelector("template.card-action-placeholder").replaceWith(viewButtonComponent);
-    } else if (type === ElementTypeConstants.FOLDER) {
+    if (type === ElementTypeConstants.FOLDER) {
+        card.querySelector('span.card-icon').innerHTML = 'folder';
+        
         const navigateButtonComponent = navigateButton(id, title);
-        card.querySelector("template.card-action-placeholder").replaceWith(navigateButtonComponent);
+        card.querySelector('div.card-actions').append(navigateButtonComponent);
+    } else if (type === ElementTypeConstants.NOTE) {
+        card.querySelector('span.card-icon').innerHTML = 'description';
+
+        card.querySelector('div.card-content').insertAdjacentHTML('beforeEnd', `<p class="subtitle">${content}</p>`);
+
+        const viewButtonComponent = viewButton(id);
+        card.querySelector('div.card-actions').append(viewButtonComponent);
     }
 
     const editButtonComponent = editButton(id, type, title, content);
