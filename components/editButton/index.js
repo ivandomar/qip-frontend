@@ -10,6 +10,7 @@ const handleClick = (elementId, elementType, elementTitle, elementContent) => {
         title: 'Edit element',
         html: editionFormComponent,
         showConfirmButton: false,
+        showCloseButton: true,
     });
 };
 

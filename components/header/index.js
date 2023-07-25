@@ -15,6 +15,7 @@ export default () => {
         title: 'Create new element',
         html: creationFormComponent,
         showConfirmButton: false,
+        showCloseButton: true,
       });
 
     header.append(addButton);

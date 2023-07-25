@@ -48,7 +48,6 @@ export default () => {
     const form = document.createElement('form');
     form.id = 'add-form';
     form.onsubmit = handleCreationSubmit;
-
     form.onchange = (event) => handleFormChange(form, event.target);
 
     form.innerHTML = `
@@ -66,7 +65,6 @@ export default () => {
         <input type="text" name="content" placeholder="Content" />
         <br />
         <div id="add-form-actions">
-            <button type="button" id="cancel-button"><span class="material-icons-outlined">close</span></button>
             <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
         </div>
     `;

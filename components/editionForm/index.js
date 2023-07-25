@@ -45,7 +45,6 @@ export default (id, type, title, content) => {
         />
         <br />
         <div id="edit-form-actions">
-            <button type="button" id="cancel-button"><span class="material-icons-outlined">close</span></button>
             <button type="submit" id="send-button"><span class="material-icons-outlined">send</span></button>
         </div>
     `;
